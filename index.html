@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chery Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="cheryForm" action="https://script.google.com/macros/s/AKfycbxB06S5j9kGfrlqttmo7b3_Z5HmysN52ygtW1ycjH0IqT2qmEEYciOGuTbMnD6SA8TV/exec" method="post">
+    <div class="header-eng">
+        <p>Beat the heat with our cool summer deals! Cool off with the Chery Pro Tiggo 4 Pro at just SAR 555 per month. 0% interest, downpayment and admin fees. Book a test drive today!</p>
+            <p>* Terms & Conditions Apply</p>
+            <p>* Insurance Excluded</p>
+    </div>
+    <Div class="header-ar" dir="rtl">
+        <p>عرضنا يبرّد القلب!</p>
+            <p>ابدأ رحلتك مع شيري برو تيجو 4 برو، وعش الفرق بقسط شهري بقيمة555 رس فقط. 0% دفعة أولى، و0% هامش ربح، و0% رسوم إدارية. جرّب قيادة استثنائية الآن!</p>
+            <p>* تطبق الشروط والأحكام.</p>
+            <p>* القسط لا يشمل التأمين</p>
+    </Div>
+    
+        <label for="name">Name / الاسم*</label>
+        <input type="text" id="name" name="name" required>
+
+        <div class="radio-group">
+            <label>Title / اللقب*:</label>
+            <label><input type="radio" id="titleMr" name="title" value="Mr" required> Mr</label>
+            <label><input type="radio" id="titleMiss" name="title" value="Miss" required> Miss</label>
+            <label><input type="radio" id="titleMrs" name="title" value="Mrs" required> Mrs</label>
+        </div>
+
+        <div class="radio-group">
+            <label>Nationality / الجنسية*</label>
+            <label><input type="radio" id="nationalitySaudi" name="nationality" value="Saudi" required> Saudi</label>
+            <label><input type="radio" id="nationalityNonSaudi" name="nationality" value="Non-Saudi" required> Non-Saudi</label>
+            <label><input type="radio" id="nationalityForeigner" name="nationality" value="Foreigner" required> Foreigner</label>
+        </div>
+
+        <div class="radio-group">
+            <label>Car Model / موديل السيارة*</label>
+            <label><input type="radio" id="carModelArrizo6Pro" name="carModel" value="Arrizo 6 Pro" required> Arrizo 6 Pro</label>
+            <label><input type="radio" id="carModelArrizo8" name="carModel" value="Arrizo 8" required> Arrizo 8</label>
+            <label><input type="radio" id="carModelTiggo7Pro" name="carModel" value="Tiggo 7 Pro" required> Tiggo 7 Pro</label>
+        </div>
+
+        <label for="mobile">Mobile / الجوال*</label>
+        <input type="text" id="mobile" name="mobile" value="+966" required>
+
+        <div class="radio-group">
+            <label>Location / الموقع*</label>
+            <label><input type="radio" id="locationRiyadh" name="location" value="Riyadh" required> Riyadh</label>
+            <label><input type="radio" id="locationJeddah" name="location" value="Jeddah" required> Jeddah</label>
+            <label><input type="radio" id="locationMecca" name="location" value="Mecca" required> Mecca</label>
+            <label><input type="radio" id="locationMadina" name="location" value="Madina" required> Madina</label>
+            <label><input type="radio" id="locationDammam" name="location" value="Dammam" required> Dammam</label>
+        </div>
+
+        <label for="email">Email / البريد الإلكتروني*</label>
+        <input type="email" id="email" name="email" required>
+
+        <div class="radio-group">
+            <label>Expected Purchase Date / تاريخ الشراء المتوقع*</label>
+            <label><input type="radio" id="purchaseDateImmediately" name="purchaseDate" value="Immediately" required> Immediately</label>
+            <label><input type="radio" id="purchaseDateOneMonth" name="purchaseDate" value="One month" required> One month</label>
+            <label><input type="radio" id="purchaseDateTwoMonths" name="purchaseDate" value="Two months" required> Two months</label>
+            <label><input type="radio" id="purchaseDateThreeMonthsAndAbove" name="purchaseDate" value="3 months and above" required> 3 months and above</label>
+        </div>
+
+        <div class="radio-group">
+            <label>Payment Type / طريقة الدفع*</label>
+            <label><input type="radio" id="paymentTypeCash" name="paymentType" value="Cash" required> Cash</label>
+            <label><input type="radio" id="paymentTypeInstallment" name="paymentType" value="Installment" required> Installment</label>
+        </div>
+
+        <div id="bankField" style="display: none;">
+            <label for="bank">Bank / مصرف*:</label>
+            <select id="bank" name="bank">
+                <option value="">Select Bank</option>
+                <option value="AlRajhi Bank">AlRajhi Bank</option>
+                <option value="Saudi National Bank (SNB)">Saudi National Bank (SNB)</option>
+                <option value="Riyad Bank">Riyad Bank</option>
+                <option value="SABB">SABB</option>
+                <option value="Alinma Bank">Alinma Bank</option>
+                <option value="ANB">ANB</option>
+                <option value="Saudi Fransi Bank">Saudi Fransi Bank</option>
+                <option value="AlJazira Bank">AlJazira Bank</option>
+                <option value="Emirates Bank">Emirates Bank</option>
+                <option value="Others">Others</option>
+            </select>
+        </div>
+
+        <div id="salaryField" style="display: none;">
+            <div class="radio-group">
+                <label>Salary Range / الراتب*:</label>
+                <label><input type="radio" id="salaryBelow5000" name="salary" value="Below 5,000" required> Below 5,000</label>
+                <label><input type="radio" id="salaryBetween500010000" name="salary" value="Between 5,000 - 10,000" required> Between 5,000 - 10,000</label>
+                <label><input type="radio" id="salaryOver10000" name="salary" value="Over 10,000" required> Over 10,000</label>
+            </div>
+        </div>
+
+        <a href="#" id="termsToggle">Terms & Conditions / الشروط والأحكام:</a>
+        <div class="terms-content" id="termsContentEnglish" style="display: none;">
+            <p> The offer applies to the Chery Pro cars listed below.</p>
+
+            <p>   The offer is valid from May 1st until May 31st 2024</p>
+
+            <p>    Insurance: Based on the percentage of insurance for each customer.</p>
+
+            <p>    Chery Arrizo 6 Pro 2024, monthly installment starting from 666 SR, with 0% down payment, 0% admin fees, 0% interest rate, not including insurance and registration fees, and varies depending on the car trim.</p>
+
+            <p>    Chery Arrizo 8 2024, monthly installment starting from 888 Saudi SR, with 0% down payment, 0% admin fees, 0% interest rate, not including insurance and registration fees, and varies depending on the car trim.</p>
+
+            <p>    Chery Tiggo 8 2023, monthly installment starting from 999 Saudi SR, with 0% down payment, 0% admin fees, 0% interest rate, not including insurance and registration fees, and varies depending on the car trim.</p>
+
+            <p>    Chery Tiggo 7 2024, monthly installment starting from 777 Saudi SR, with 0% down payment, 0% admin fees, 0% interest rate, not including insurance and registration fees, and varies depending on the car trim.</p>
+        </div>
+        <div class="terms-content" id="termsContentArabic" dir="rtl" style="display: none;">
+            
+            <p>يسري العرض على سيارات شيري برو الموضحة أدناه</p>
+            <p>ممن 1 مايو حتى 31 مايو 2024</p>
+            <p> التأمين : بناء على سجل العميل التأميني</p>
+            <p> 
+شيري أريزو 6 برو 2024 بقسط يبدأ من 666 ريال سعودي غير شامل التأمين ورسوم التسجيل ويختلف
+باتلاف فئة السيارة و 0% دفعة أولى, 0% رسوم إدارية وهامش ربح يبدأ من 0% مع استحقاق العميل لباقة
+الصيانة 40,000 كلم أو سنتين أيهما أولا</p>
+
+            <p>
+
+2024 بقسط يبدأ من 888 ريال سعودي غير شامل التأمين ورسوم التسجيل ويختلف باختلاف شيري أريزو 8
+فئة السيارة و 0% دفعة أولى, 0% رسوم إدارية وهامش ربح يبدأ من 0% مع استحقاق العميل لباقة الصيانة
+80,000 كلم أو 8 سنوات أيهما أولا</p>
+
+            <p>
+
+2024 بقسط يبدأ من 777 ريال سعودي غير شامل التأمين ورسوم التسجيل ويختلف باختلاف شيري تيجو 7
+فئة السيارة و 0% دفعة أولى, 0% رسوم إدارية وهامش ربح يبدأ من 0% مع استحقاق العميل لباقة الصيانة
+40,000 كلم أو سنتين أيهما أولا</p>
+
+            <p>
+
+2023 بقسط يبدأ من 999 ريال سعودي غير شامل التأمين ورسوم التسجيل ويختلف باختلاف شيري تيجو 8
+فئة السيارة و 0% دفعة أولى, 0% رسوم إدارية وهامش ربح يبدأ من 0% مع استحقاق العميل لباقة الصيانة
+40,000 كلم أو سنتين أيهما أولا</p>
+
+        
+        
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="thankYouMessage" style="display: none;">
+        <p>Thank you. We'll contact you shortly.</p>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const cheryForm = document.getElementById("cheryForm");
+            const paymentTypeInstallment = document.getElementById("paymentTypeInstallment");
+            const bankField = document.getElementById("bankField");
+            const salaryField = document.getElementById("salaryField");
+            const bank = document.getElementById("bank");
+            const salaryRadios = document.querySelectorAll('input[name="salary"]');
+
+            paymentTypeInstallment.addEventListener("change", function() {
+                if (paymentTypeInstallment.checked) {
+                    bankField.style.display = "block";
+                    salaryField.style.display = "block";
+                    bank.setAttribute("required", "required");
+                    salaryRadios.forEach(radio => {
+                        radio.setAttribute("required", "required");
+                    });
+                }
+            });
+
+            const paymentTypeCash = document.getElementById("paymentTypeCash");
+            paymentTypeCash.addEventListener("change", function() {
+                if (paymentTypeCash.checked) {
+                    bankField.style.display = "none";
+                    salaryField.style.display = "none";
+                    bank.removeAttribute("required");
+                    salaryRadios.forEach(radio => {
+                        radio.removeAttribute("required");
+                    });
+                }
+            });
+
+            const termsToggle = document.getElementById("termsToggle");
+            const termsContentEnglish = document.getElementById("termsContentEnglish");
+            const termsContentArabic = document.getElementById("termsContentArabic");
+
+            termsToggle.addEventListener("click", function(e) {
+                e.preventDefault();
+                if (termsContentEnglish.style.display === "none") {
+                    termsContentEnglish.style.display = "block";
+                    termsContentArabic.style.display = "block";
+                } else {
+                    termsContentEnglish.style.display = "none";
+                    termsContentArabic.style.display = "none";
+                }
+            });
+
+            cheryForm.addEventListener("submit", function(e) {
+                e.preventDefault();
+                // Send the form data to the Google Apps Script web app
+                const formData = new FormData(cheryForm);
+                fetch(cheryForm.action, {
+                    method: 'POST',
+                    body: formData,
+                })
+                .then(response => response.text())
+                .then(responseText => {
+                    console.log(responseText);
+                    cheryForm.style.display = "none";
+                    document.getElementById("thankYouMessage").style.display = "block";
+                })
+                .catch(error => console.error('Error:', error));
+            });
+        });
+    </script>
+</body>
+</html>
