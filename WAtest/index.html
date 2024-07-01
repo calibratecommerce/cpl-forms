@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chery Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="cheryForm" action="https://script.google.com/macros/s/AKfycby4D9yfY6L4Xu6vgpo-o9DTOcFh_vbVPh7vyiwZQqSqxJ9zJouYIpTAuqpOitFJlXFGYQ/exec" method="post">
+    <div class="header-eng">
+        <p>Beat the heat with our cool summer deals! Cool off with the Chery Pro Tiggo 4 Pro at just SAR 555 per month. 0% interest, downpayment and admin fees. Book a test drive today!</p>
+            <p>* Terms & Conditions Apply</p>
+            <p>* Insurance Excluded</p>
+    </div>
+    <Div class="header-ar" dir="rtl">
+        <p>عرضنا يبرّد القلب!</p>
+            <p>ابدأ رحلتك مع شيري برو تيجو 4 برو، وعش الفرق بقسط شهري بقيمة555 رس فقط. 0% دفعة أولى، و0% هامش ربح، و0% رسوم إدارية. جرّب قيادة استثنائية الآن!</p>
+            <p>* تطبق الشروط والأحكام.</p>
+            <p>* القسط لا يشمل التأمين</p>
+    </Div>
+    
+        <label for="name">Name / الاسم*</label>
+        <input type="text" id="name" name="name" required>
+
+        <div class="radio-group">
+            <label>Title / اللقب*:</label>
+            <label><input type="radio" id="titleMr" name="title" value="Mr" required> Mr</label>
+            <label><input type="radio" id="titleMiss" name="title" value="Miss" required> Miss</label>
+            <label><input type="radio" id="titleMrs" name="title" value="Mrs" required> Mrs</label>
+        </div>
+
+        <label for="mobile">Mobile / الجوال*</label>
+        <input type="text" id="mobile" name="mobile" value="+966" required>
+
+        <label for="email">Email / البريد الإلكتروني*</label>
+        <input type="email" id="email" name="email" required>
+
+        <a href="#" id="termsToggle">Terms & Conditions / الشروط والأحكام:</a>
+        <div class="terms-content" id="termsContentEnglish" style="display: none;">
+            <p> The offer applies to the Chery Pro cars listed below.</p>
+
+            <p>   The offer is valid from May 1st until May 31st 2024</p>
+
+            <p>    Insurance: Based on the percentage of insurance for each customer.</p>
+
+            <p>    Chery Arrizo 6 Pro 2024, monthly installment starting from 666 SR, with 0% down payment, 0% admin fees, 0% interest rate, not including insurance and registration fees, and varies depending on the car trim.</p>
+
+            <p>    Chery Arrizo 8 2024, monthly installment starting from 888 Saudi SR, with 0% down payment, 0% admin fees, 0% interest rate, not including insurance and registration fees, and varies depending on the car trim.</p>
+
+            <p>    Chery Tiggo 8 2023, monthly installment starting from 999 Saudi SR, with 0% down payment, 0% admin fees, 0% interest rate, not including insurance and registration fees, and varies depending on the car trim.</p>
+
+            <p>    Chery Tiggo 7 2024, monthly installment starting from 777 Saudi SR, with 0% down payment, 0% admin fees, 0% interest rate, not including insurance and registration fees, and varies depending on the car trim.</p>
+        </div>
+        <div class="terms-content" id="termsContentArabic" dir="rtl" style="display: none;">
+            
+            <p>يسري العرض على سيارات شيري برو الموضحة أدناه</p>
+            <p>ممن 1 مايو حتى 31 مايو 2024</p>
+            <p> التأمين : بناء على سجل العميل التأميني</p>
+            <p> 
+شيري أريزو 6 برو 2024 بقسط يبدأ من 666 ريال سعودي غير شامل التأمين ورسوم التسجيل ويختلف
+باتلاف فئة السيارة و 0% دفعة أولى, 0% رسوم إدارية وهامش ربح يبدأ من 0% مع استحقاق العميل لباقة
+الصيانة 40,000 كلم أو سنتين أيهما أولا</p>
+
+            <p>
+
+2024 بقسط يبدأ من 888 ريال سعودي غير شامل التأمين ورسوم التسجيل ويختلف باختلاف شيري أريزو 8
+فئة السيارة و 0% دفعة أولى, 0% رسوم إدارية وهامش ربح يبدأ من 0% مع استحقاق العميل لباقة الصيانة
+80,000 كلم أو 8 سنوات أيهما أولا</p>
+
+            <p>
+
+2024 بقسط يبدأ من 777 ريال سعودي غير شامل التأمين ورسوم التسجيل ويختلف باختلاف شيري تيجو 7
+فئة السيارة و 0% دفعة أولى, 0% رسوم إدارية وهامش ربح يبدأ من 0% مع استحقاق العميل لباقة الصيانة
+40,000 كلم أو سنتين أيهما أولا</p>
+
+            <p>
+
+2023 بقسط يبدأ من 999 ريال سعودي غير شامل التأمين ورسوم التسجيل ويختلف باختلاف شيري تيجو 8
+فئة السيارة و 0% دفعة أولى, 0% رسوم إدارية وهامش ربح يبدأ من 0% مع استحقاق العميل لباقة الصيانة
+40,000 كلم أو سنتين أيهما أولا</p>
+
+        
+        
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="thankYouMessage" style="display: none;">
+        <p>Thank you. We'll contact you shortly.</p>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const cheryForm = document.getElementById("cheryForm");
+            const termsToggle = document.getElementById("termsToggle");
+            const termsContentEnglish = document.getElementById("termsContentEnglish");
+            const termsContentArabic = document.getElementById("termsContentArabic");
+
+            termsToggle.addEventListener("click", function(e) {
+                e.preventDefault();
+                if (termsContentEnglish.style.display === "none") {
+                    termsContentEnglish.style.display = "block";
+                    termsContentArabic.style.display = "block";
+                } else {
+                    termsContentEnglish.style.display = "none";
+                    termsContentArabic.style.display = "none";
+                }
+            });
+
+            cheryForm.addEventListener("submit", function(e) {
+                e.preventDefault();
+                // Send the form data to the Google Apps Script web app
+                const formData = new FormData(cheryForm);
+                fetch(cheryForm.action, {
+                    method: 'POST',
+                    body: formData,
+                })
+                .then(response => response.text())
+                .then(responseText => {
+                    console.log(responseText);
+                    cheryForm.style.display = "none";
+                    document.getElementById("thankYouMessage").style.display = "block";
+                })
+                .catch(error => console.error('Error:', error));
+            });
+        });
+    </script>
+</body>
+</html>
