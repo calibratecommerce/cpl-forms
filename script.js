@@ -1,4 +1,3 @@
-// script.js
 document.addEventListener('DOMContentLoaded', function() {
     const paymentTypeRadios = document.querySelectorAll('input[name="paymentType"]');
     const bankField = document.getElementById('bankField');
@@ -25,17 +24,21 @@ document.addEventListener('DOMContentLoaded', function() {
     form.addEventListener('submit', function(event) {
         event.preventDefault();
 
-        // Your existing form submission logic here
+        // Collect form data
         const formData = new FormData(form);
+        const data = {};
+        formData.forEach((value, key) => { data[key] = value });
+
+        // Post form data to Google Apps Script Web App
         fetch(form.action, {
             method: 'POST',
+            mode: 'no-cors', // no-cors mode to prevent CORS errors
             body: formData,
         })
-        .then(response => response.text())
-        .then(result => {
+        .then(response => {
             // Hide the form
             form.style.display = 'none';
-            
+
             // Show the thank you message
             thankYouMessage.style.display = 'block';
 
