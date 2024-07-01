@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const paymentTypeRadios = document.querySelectorAll('input[name="paymentType"]');
     const bankField = document.getElementById('bankField');
     const salaryField = document.getElementById('salaryField');
+    const form = document.getElementById('yourForm');
+    const thankYouMessage = document.getElementById('thankYouMessage');
 
     paymentTypeRadios.forEach(radio => {
         radio.addEventListener('change', function() {
@@ -19,4 +21,25 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // Your existing form submission logic here
+
+        // Show the thank you message
+        thankYouMessage.style.display = 'block';
+
+        // Fire the DV360 floodlight tag
+        var axel = Math.random() + "";
+        var a = axel * 10000000000000;
+        var iframe = document.createElement('iframe');
+        iframe.src = "https://14091212.fls.doubleclick.net/activityi;src=14091212;type=invmedia;cat=rm_fo0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;npa=;gdpr=${GDPR};gdpr_consent=${GDPR_CONSENT_755};ord=" + a + "?";
+        iframe.width = "1";
+        iframe.height = "1";
+        iframe.frameborder = "0";
+        iframe.style.display = "none";
+        document.body.appendChild(iframe);
+    });
 });
+
