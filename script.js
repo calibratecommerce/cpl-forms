@@ -45,6 +45,9 @@ document.addEventListener('DOMContentLoaded', function() {
             iframe.style.display = "none";
             document.body.appendChild(iframe);
 
+            // Hide the form
+            form.style.display = 'none';
+
             // Redirect to thank you page or show thank you message
             window.location.href = 'thank-you.html'; // Example: Redirect to thank you page
             // or
