@@ -1,63 +1,55 @@
-document.addEventListener("DOMContentLoaded", function() {
-            const cheryForm = document.getElementById("cheryForm");
-            const paymentTypeInstallment = document.getElementById("paymentTypeInstallment");
-            const bankField = document.getElementById("bankField");
-            const salaryField = document.getElementById("salaryField");
-            const bank = document.getElementById("bank");
-            const salaryRadios = document.querySelectorAll('input[name="salary"]');
+document.addEventListener('DOMContentLoaded', function() {
+    const paymentTypeRadios = document.querySelectorAll('input[name="paymentType"]');
+    const bankField = document.getElementById('bankField');
+    const salaryField = document.getElementById('salaryField');
+    const form = document.getElementById('yourForm');
+    const thankYouMessage = document.getElementById('thankYouMessage');
 
-            paymentTypeInstallment.addEventListener("change", function() {
-                if (paymentTypeInstallment.checked) {
-                    bankField.style.display = "block";
-                    salaryField.style.display = "block";
-                    bank.setAttribute("required", "required");
-                    salaryRadios.forEach(radio => {
-                        radio.setAttribute("required", "required");
-                    });
-                }
-            });
-
-            const paymentTypeCash = document.getElementById("paymentTypeCash");
-            paymentTypeCash.addEventListener("change", function() {
-                if (paymentTypeCash.checked) {
-                    bankField.style.display = "none";
-                    salaryField.style.display = "none";
-                    bank.removeAttribute("required");
-                    salaryRadios.forEach(radio => {
-                        radio.removeAttribute("required");
-                    });
-                }
-            });
-
-            const termsToggle = document.getElementById("termsToggle");
-            const termsContentEnglish = document.getElementById("termsContentEnglish");
-            const termsContentArabic = document.getElementById("termsContentArabic");
-
-            termsToggle.addEventListener("click", function(e) {
-                e.preventDefault();
-                if (termsContentEnglish.style.display === "none") {
-                    termsContentEnglish.style.display = "block";
-                    termsContentArabic.style.display = "block";
-                } else {
-                    termsContentEnglish.style.display = "none";
-                    termsContentArabic.style.display = "none";
-                }
-            });
-
-            cheryForm.addEventListener("submit", function(e) {
-                e.preventDefault();
-                // Send the form data to the Google Apps Script web app
-                const formData = new FormData(cheryForm);
-                fetch(cheryForm.action, {
-                    method: 'POST',
-                    body: formData,
-                })
-                .then(response => response.text())
-                .then(responseText => {
-                    console.log(responseText);
-                    cheryForm.style.display = "none";
-                    document.getElementById("thankYouMessage").style.display = "block";
-                })
-                .catch(error => console.error('Error:', error));
-            });
+    paymentTypeRadios.forEach(radio => {
+        radio.addEventListener('change', function() {
+            if (this.value === 'Installment') {
+                bankField.style.display = 'block';
+                salaryField.style.display = 'block';
+                document.getElementById('bank').setAttribute('required', 'required');
+                document.querySelectorAll('input[name="salary"]').forEach(input => input.setAttribute('required', 'required'));
+            } else {
+                bankField.style.display = 'none';
+                salaryField.style.display = 'none';
+                document.getElementById('bank').removeAttribute('required');
+                document.querySelectorAll('input[name="salary"]').forEach(input => input.removeAttribute('required'));
+            }
         });
+    });
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // Collect form data
+        const formData = new FormData(form);
+
+        // Post form data to Google Apps Script Web App
+        fetch(form.action, {
+            method: 'POST',
+            mode: 'no-cors',
+            body: formData
+        })
+        .then(() => {
+            // Fire DV360 floodlight tag
+            var axel = Math.random() + "";
+            var a = axel * 10000000000000;
+            var iframe = document.createElement('iframe');
+            iframe.src = `https://14091212.fls.doubleclick.net/activityi;src=14091212;type=invmedia;cat=rm_fo0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;npa=;gdpr=${GDPR};gdpr_consent=${GDPR_CONSENT_755};ord=${a}?`;
+            iframe.width = "1";
+            iframe.height = "1";
+            iframe.frameborder = "0";
+            iframe.style.display = "none";
+            document.body.appendChild(iframe);
+
+            // Redirect to thank you page or show thank you message
+            window.location.href = 'thank-you.html'; // Example: Redirect to thank you page
+            // or
+            // thankYouMessage.style.display = 'block'; // Example: Show thank you message
+        })
+        .catch(error => console.error('Error:', error));
+    });
+});
