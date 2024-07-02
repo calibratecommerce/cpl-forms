@@ -26,16 +26,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Collect form data
         const formData = new FormData(form);
-        const data = {};
-        formData.forEach((value, key) => { data[key] = value });
 
         // Post form data to Google Apps Script Web App
         fetch(form.action, {
             method: 'POST',
-            mode: 'no-cors', // no-cors mode to prevent CORS errors
-            body: formData,
+            mode: 'no-cors',
+            body: formData
         })
-        .then(response => {
+        .then(() => {
             // Hide the form
             form.style.display = 'none';
 
@@ -46,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
             var axel = Math.random() + "";
             var a = axel * 10000000000000;
             var iframe = document.createElement('iframe');
-            iframe.src = "https://14091212.fls.doubleclick.net/activityi;src=14091212;type=invmedia;cat=rm_fo0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;npa=;gdpr=${GDPR};gdpr_consent=${GDPR_CONSENT_755};ord=" + a + "?";
+            iframe.src = `https://14091212.fls.doubleclick.net/activityi;src=14091212;type=invmedia;cat=rm_fo0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;npa=;gdpr=${GDPR};gdpr_consent=${GDPR_CONSENT_755};ord=${a}?`;
             iframe.width = "1";
             iframe.height = "1";
             iframe.frameborder = "0";
