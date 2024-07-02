@@ -35,10 +35,28 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .then(() => {
             // Fire DV360 floodlight tag
-            var axel = Math.random() + "";
-            var a = axel * 10000000000000;
-            document.write('<iframe src="https://14091212.fls.doubleclick.net/activityi;src=14091212;type=invmedia;cat=rm_fo0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;npa=;gdpr=${GDPR};gdpr_consent=${GDPR_CONSENT_755};ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+            var url = this.getAttribute("href", 2);
+  
+              createFloodlightTag("source", "type", "cat", function() {
+                window.location = thank-you.html; // Redirect the user after the tag successfully fires
+              });
+            });
+            
+            function createFloodlightTag(source, type, cat, callback) {
+              var axel = Math.random()+'';
+              var a = axel * 10000000000000000;
+              var tagUrl = "https://14091212.fls.doubleclick.net/activityi;src=14091212;type=invmedia;cat=rm_fo0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;npa=;gdpr=${GDPR};gdpr_consent=${GDPR_CONSENT_755};" + source + ";type=" + type + ";cat=" + cat + ";ord=" + a + "?";
+              var tag = document.createElement('iframe');
+              tag.setAttribute('src', tagUrl);
+              tag.height = '1';
+              tag.width = '1';
+              tag.frameborder = '0';
+              
+              if (callback) tag.onload = callback;
+              document.body.appendChild(tag);
+            }
 
+            
             // Hide the form
             form.style.display = 'none';
 
