@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const floodlightUrl = form.dataset.floodlightUrl;
         if (floodlightUrl) {
           var iframe = document.createElement('iframe');
-          iframe.src = "https://14091212.fls.doubleclick.net/activityi;s=14091212;type=invmedia;cat=rm_fo0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;npa=;gdpr=${GDPR);gdpr_consent=${GDPR_CONSENT_755};ord=" + a + "?";
+          iframe.src = floodlightUrl;
           iframe.width = "1";
           iframe.height = "1";
           iframe.frameborder = "0";
