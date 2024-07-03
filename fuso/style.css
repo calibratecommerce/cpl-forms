@@ -13,10 +13,14 @@ form {
     background-color: #f9f9f9;
 }
 
-label,header-eng {
+label {
     display: block;
     margin-bottom: 5px;
     font-size: 1.2em;
+}
+
+.header-eng {
+    font-size: 24px; /* Adjust the font size as needed */
 }
 
 input[type="text"],
