@@ -1,0 +1,87 @@
+/* style.css */
+body {
+    font-family: Calibri;
+    margin: 20px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+    width: 95%;
+    padding: 8px;
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.radio-group {
+    margin-bottom: 30px; /* Increased spacing between questions */
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 10px;
+}
+
+.radio-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    width: 95%; /* Make button span the full width */
+    font-size: 1.2em; /* Make button text larger */
+    margin-top: 20px; /* Space between form and button */
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.terms-label {
+    cursor: pointer;
+    text-decoration: underline;
+    color: blue;
+    margin-top: 10px; /* Space above terms label */
+}
+
+.terms-content {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    font-size: 8px;
+}
+
+#thankYouMessage {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: center;
+}
