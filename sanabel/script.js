@@ -55,17 +55,17 @@ document.addEventListener("DOMContentLoaded", function() {
                 .then(response => response.text())
                 .then(responseText => {
                     console.log(responseText);
-                        if (response.ok) { // Check for successful form submission
+                     //   if (response.ok) { // Check for successful form submission
                                 // Floodlight snippet (fires only on successful submission)
-                                var axel = Math.random() + "";
-                                var a = axel * 10000000000000;
-                                document.write('<iframe src="https://14091212.fls.doubleclick.net/activityi;src=14091212;type=invmedia;cat=rm_fo0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;npa=;gdpr=${GDPR};gdpr_consent=${GDPR_CONSENT_755};ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+                           //     var axel = Math.random() + "";
+                            //    var a = axel * 10000000000000;
+                            //    document.write('<iframe src="https://14091212.fls.doubleclick.net/activityi;src=14091212;type=invmedia;cat=rm_fo0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;npa=;gdpr=${GDPR};gdpr_consent=${GDPR_CONSENT_755};ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
                             
                     cheryForm.style.display = "none";
                     document.getElementById("thankYouMessage").style.display = "block";
-                })else {
-                    console.error('Error:', error);
-                  }
+                })//else {
+                  //  console.error('Error:', error);
+                 // }
                 .catch(error => console.error('Error:', error));
             });
         });
