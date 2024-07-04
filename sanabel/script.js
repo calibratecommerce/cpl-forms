@@ -79,17 +79,13 @@ document.addEventListener("DOMContentLoaded", function() {
          //   document.body.appendChild(iframe);
            
             // Create and append the script tag
-            var script = document.createElement('script');
-            script.type = 'text/javascript';
-            script.text = `
-                document.write('<img src="https://ad.doubleclick.net/ddm/activity/src=14091212;type=invmedia;cat=rm_sa0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;npa=;gdpr=\${GDPR};gdpr_consent=\${GDPR_CONSENT_755};ord=' + ${a} + '?" width="1" height="1" alt=""/>');
-            `;
-            document.body.appendChild(script);
+           var img = document.createElement('img');
+            img.src = `https://ad.doubleclick.net/ddm/activity/src=14091212;type=invmedia;cat=rm_sa0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;npa=;gdpr=${encodeURIComponent('GDPR')};gdpr_consent=${encodeURIComponent('GDPR_CONSENT_755')};ord=${a}?`;
+            img.width = 1;
+            img.height = 1;
+            img.alt = "";
+            document.body.appendChild(img);
 
-            // Create and append the noscript tag
-            var noscript = document.createElement('noscript');
-            noscript.innerHTML = '<img src="https://ad.doubleclick.net/ddm/activity/src=14091212;type=invmedia;cat=rm_sa0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;npa=;gdpr=${GDPR};gdpr_consent=${GDPR_CONSENT_755};ord=1?" width="1" height="1" alt=""/>';
-            document.body.appendChild(noscript);
            
             // Log DV360 tag firing
             console.log('DV360 tag has fired.');
