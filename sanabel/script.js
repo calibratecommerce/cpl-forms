@@ -69,14 +69,28 @@ document.addEventListener("DOMContentLoaded", function() {
             // Floodlight snippet (fires only on successful submission)
             var axel = Math.random() + "";
             var a = axel * 10000000000000;
-            var iframe = document.createElement('iframe');
-            iframe.src = 'https://14091212.fls.doubleclick.net/activityi;src=14091212;type=invmedia;cat=rm_fo0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;npa=;gdpr=${GDPR};gdpr_consent=${GDPR_CONSENT_755};ord=' + a + '?';
-            iframe.width = '1';
-            iframe.height = '1';
-            iframe.frameBorder = '0';
-            iframe.style.display = 'none';
-            document.body.appendChild(iframe);
+            
+          //  var iframe = document.createElement('iframe');
+          //  iframe.src = 'https://14091212.fls.doubleclick.net/activityi;src=14091212;type=invmedia;cat=rm_fo0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;npa=;gdpr=${GDPR};gdpr_consent=${GDPR_CONSENT_755};ord=' + a + '?';
+          //  iframe.width = '1';
+          //  iframe.height = '1';
+         //   iframe.frameBorder = '0';
+         //   iframe.style.display = 'none';
+         //   document.body.appendChild(iframe);
+           
+            // Create and append the script tag
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.text = `
+                document.write('<img src="https://ad.doubleclick.net/ddm/activity/src=14091212;type=invmedia;cat=rm_sa0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;npa=;gdpr=\${GDPR};gdpr_consent=\${GDPR_CONSENT_755};ord=' + ${a} + '?" width="1" height="1" alt=""/>');
+            `;
+            document.body.appendChild(script);
 
+            // Create and append the noscript tag
+            var noscript = document.createElement('noscript');
+            noscript.innerHTML = '<img src="https://ad.doubleclick.net/ddm/activity/src=14091212;type=invmedia;cat=rm_sa0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;npa=;gdpr=${GDPR};gdpr_consent=${GDPR_CONSENT_755};ord=1?" width="1" height="1" alt=""/>';
+            document.body.appendChild(noscript);
+           
             // Log DV360 tag firing
             console.log('DV360 tag has fired.');
 
