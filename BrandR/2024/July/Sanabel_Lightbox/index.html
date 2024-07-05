@@ -4,59 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ad Preview</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        .article {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        .article img {
-            width: 100%;
-            height: auto;
-        }
-        #ad-container {
-            width: 300px;
-            height: 600px;
-            margin: 20px auto;
-            border: 1px solid #ccc; /* Optional: to visualize the ad container */
-        }
-        ins.adcads {
-            display: block;
-            width: 300px;
-            height: 600px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="article">
-        <img src="images/article2.jpg" alt="Dummy Article Placeholder">
-    </div>
-
-    <!-- Insert the Ad Tag here -->
-    <div id="ad-container">
-        <ins class="adcads"
-            data-adc-id="OsAfSONOCaN1"
-            data-unit="OsAfSONOCaN1"
-            data-clickable="yes"
-            data-redir="yes"
-            data-click-tracker="${CLICK_URL}YOURURLHERE"
-            data-click-macro="${CLICK_URL}"
-            data-has-desktop="yes"
-            data-responsive="yes"
-            data-width="300"
-            data-height="600"
-            data-meta-source-url="${SOURCE_URL}">
-            <script src="https://media.adcanvas.com/OsAfSONOCaN1/adtag.js" type="text/javascript" async></script>
-        </ins>
-    </div>
-
-    <div class="article">
-        <img src="images/article1.jpg" alt="Dummy Article Placeholder">
-        <img src="images/article2.jpg" alt="Dummy Article Placeholder">
-        <img src="images/article1.jpg" alt="Dummy Article Placeholder">
+    <div class="content">
+        <img src="images/article1.jpg" alt="Article Image 1" class="article-image">
+        <div class="ad-container">
+            <ins class="adcads"
+                data-adc-id="OsAfSONOCaN1"
+                data-unit="OsAfSONOCaN1"
+                data-clickable="yes"
+                data-redir="yes"
+                data-click-tracker="${CLICK_URL}YOURURLHERE"
+                data-click-macro="${CLICK_URL}"
+                data-has-desktop="yes"
+                data-responsive="yes"
+                data-width="300"
+                data-height="600"
+                data-meta-source-url="${SOURCE_URL}">
+                <script src="https://media.adcanvas.com/OsAfSONOCaN1/adtag.js" type="text/javascript" async></script>
+            </ins>
+        </div>
+        <img src="images/article1.jpg" alt="Article Image 2" class="article-image">
     </div>
 </body>
 </html>
