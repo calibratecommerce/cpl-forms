@@ -8,6 +8,8 @@
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
+            padding-right: 320px; /* Add space for the fixed ad container */
+            overflow-x: hidden; /* Prevent horizontal scrolling */
         }
         .article {
             margin-bottom: 40px;
@@ -19,8 +21,10 @@
         #ad-container {
             width: 300px;
             height: 600px;
+            position: fixed;
+            top: 20px;
+            right: 10px;
             border: 1px solid #ccc; /* Optional: to visualize the ad container */
-            margin: 0 auto; /* Center the ad container */
         }
         ins.adcads {
             display: inline-block;
@@ -31,7 +35,7 @@
 </head>
 <body>
     <div class="article">
-        <img src="images/article1.jpg" alt="Dummy Article Placeholder">
+        <img src="images/article2.jpg" alt="Dummy Article Placeholder">
     </div>
 
     <!-- Insert the Ad Tag here -->
@@ -51,11 +55,11 @@
             <script src="https://media.adcanvas.com/OsAfSONOCaN1/adtag.js" type="text/javascript" async></script>
         </ins>
     </div>
-
+    
         <div class="article">
-        <img src="images/article1.jpg" alt="Dummy Article Placeholder">
         <img src="images/article2.jpg" alt="Dummy Article Placeholder">
-        <img src="images/article1.jpg" alt="Dummy Article Placeholder">
+                    <img src="images/article2.jpg" alt="Dummy Article Placeholder">
+                    <img src="images/article2.jpg" alt="Dummy Article Placeholder">
     </div>
 </body>
 </html>
