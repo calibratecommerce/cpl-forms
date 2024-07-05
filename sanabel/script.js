@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function() {
            
             // Create and append the script tag
            var img = document.createElement('img');
-            img.src = `https://ad.doubleclick.net/ddm/activity/src=14091212;type=invmedia;cat=rm_sa0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;npa=;gdpr=${encodeURIComponent('GDPR')};gdpr_consent=${encodeURIComponent('GDPR_CONSENT_755')};ord=${a}?`;
+            img.src = `https://ad.doubleclick.net/ddm/activity/src=14394530;type=invmedia;cat=chery002;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;npa=;gdpr=${encodeURIComponent('GDPR')};gdpr_consent=${encodeURIComponent('GDPR_CONSENT_755')};ord=${a}?`;
             img.width = 1;
             img.height = 1;
             img.alt = "";
