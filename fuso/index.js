@@ -16,16 +16,16 @@ exports.sendToSheet = async (req, res) => {
 
     const {
       name,
+      title,
       mobile,
-      email,
-    } = req.body;
+      } = req.body;
 
     const response = await sheets.spreadsheets.values.append({
-      spreadsheetId: '1SsOHqoywrZEgA21FTUoe4PMHhj7hOZyGN5xCpbD18q0',
-      range: 'Form Responses!A1:L1',  // Update the range to include all columns
+      spreadsheetId: '1la_OT_JhYqFYLw3OzCVbWT7yjLScal-umDpcrfgjPIQ',
+      range: 'Sheet1!A1:L1',  // Update the range to include all columns
       valueInputOption: 'RAW',
       resource: {
-        values: [[name, mobile, email]],
+        values: [[name, title, mobile]],
       },
     });
 
