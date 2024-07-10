@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rich Media Creative</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        iframe {
+            width: 100vw;
+            height: 100vh;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <iframe id="creativeIframe" src="about:blank"></iframe>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            var iframe = document.getElementById('creativeIframe');
+            iframe.src = 'https://simplyfun.org/amc/2023/feb/kfc-zingerito-ms-v1/';
+            
+            iframe.onload = function() {
+                var iframeWindow = iframe.contentWindow;
+                
+                // Simulate the actions needed to skip the first screen
+                // For example, if there's a button on the first screen that needs to be clicked
+                // to move to the second screen, simulate a click on that button.
+
+                // This example assumes there's a button with a specific ID or class to be clicked.
+                // You will need to inspect the creative to find the exact element and the action needed.
+
+                // Example:
+                // var button = iframeWindow.document.querySelector('buttonSelector');
+                // button.click();
+            };
+        });
+    </script>
+</body>
+</html>
