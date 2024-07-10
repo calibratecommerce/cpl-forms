@@ -24,7 +24,7 @@ label {
 }
 
 input[type="text"],
-input[type="email"],
+input[type="title"],
 select {
     width: 95%;
     padding: 8px;
