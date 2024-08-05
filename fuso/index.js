@@ -2,7 +2,7 @@ const { google } = require('googleapis');
 const sheets = google.sheets('v4');
 const express = require('express');
 const app = express();
-app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 exports.sendToSheet = async (req, res) => {
   try {
@@ -19,14 +19,17 @@ exports.sendToSheet = async (req, res) => {
       title,
       mobile,
       labels,
-      } = req.body;
+    } = req.body;
+
+    // Log to check if the labels field is received
+    console.log(`Received labels: ${labels}`);
 
     const response = await sheets.spreadsheets.values.append({
       spreadsheetId: '1XRdCgyIWectw4OaLH2HFkwHv6LxU0T5NEoH3ELrdCWw',
-      range: 'Forms_Data!A1:AJ1',  // Update the range to include all columns
+      range: 'Forms_Data!A1:D1',  // Update the range to include all columns
       valueInputOption: 'RAW',
       resource: {
-        values: [[name, title, mobile, labels]],
+        values: [[new Date().toISOString(), name, title, mobile, labels]],
       },
     });
 
@@ -37,7 +40,7 @@ exports.sendToSheet = async (req, res) => {
   }
 };
 
-app.post('/', exports.sendToSheet);
+app.post('/submit', exports.sendToSheet);
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
