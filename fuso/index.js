@@ -20,13 +20,6 @@ exports.sendToSheet = async (req, res) => {
       mobile,
       } = req.body;
 
-    const data = {
-      name,
-      title,
-      mobile,
-      labels: 'fuso', // Adding the fixed field here
-      };
-
     const response = await sheets.spreadsheets.values.append({
       spreadsheetId: '1XRdCgyIWectw4OaLH2HFkwHv6LxU0T5NEoH3ELrdCWw',
       range: 'Forms_Data!A1:AJ1',  // Update the range to include all columns
