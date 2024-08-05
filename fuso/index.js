@@ -18,6 +18,7 @@ exports.sendToSheet = async (req, res) => {
       name,
       title,
       mobile,
+      labels,
       } = req.body;
 
     const response = await sheets.spreadsheets.values.append({
