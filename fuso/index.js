@@ -26,7 +26,7 @@ exports.sendToSheet = async (req, res) => {
       range: 'Forms_Data!A1:AJ1',  // Update the range to include all columns
       valueInputOption: 'RAW',
       resource: {
-        values: [[name, title, mobile]],
+        values: [[name, title, mobile,labels]],
       },
     });
 
