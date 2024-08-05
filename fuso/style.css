@@ -13,6 +13,11 @@ form {
     background-color: #f9f9f9;
 }
 
+.hidden {
+  display: none;
+}
+
+
 label {
     display: block;
     margin-bottom: 5px;
