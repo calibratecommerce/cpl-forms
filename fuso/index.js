@@ -25,8 +25,8 @@ exports.sendToSheet = async (req, res) => {
     console.log(`Received labels: ${labels}`);
 
     const response = await sheets.spreadsheets.values.append({
-      spreadsheetId: '1XRdCgyIWectw4OaLH2HFkwHv6LxU0T5NEoH3ELrdCWw',
-      range: 'Forms_Data!A1:D1',  // Update the range to include all columns
+      spreadsheetId: '1jhZQsl_UsC4-rPyVdLKGSq42l8tbPc9lDc-eYAIYg7o',
+      range: 'Sheet1!A1:D1',  // Update the range to include all columns
       valueInputOption: 'RAW',
       resource: {
         values: [[new Date().toISOString(), name, title, mobile, labels]],
