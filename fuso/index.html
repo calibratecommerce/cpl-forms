@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form id="fusoForm" action="https://script.google.com/macros/s/1LQ1MiwvtlRRZN8xkMbp_yUP_MORecBiZNpajpWqSzhiFvuF4Mv2uAXR8/exec" method="post">
+    <form id="fusoForm">
         <div class="header-eng">
             <p>Personal Information / معلومات شخصية</p>
         </div>
@@ -32,6 +32,34 @@
         <p>Thank you. We'll contact you shortly.</p>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        document.getElementById('fusoForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const formData = {
+                name: document.getElementById('name').value,
+                title: document.getElementById('title').value,
+                mobile: document.getElementById('mobile').value,
+                labels: document.getElementById('labels').value
+            };
+
+            fetch('https://us-central1-waapi-bq.cloudfunctions.net/function-3', {
+            //fetch('http://localhost:8080/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+                document.getElementById('thankYouMessage').style.display = 'block';
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
 </body>
 </html>
