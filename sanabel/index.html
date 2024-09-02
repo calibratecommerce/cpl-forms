@@ -162,8 +162,15 @@
             const formData = {
                 name: document.getElementById('name').value,
                 title: document.getElementById('title').value,
-                mobile: document.getElementById('mobile').value,
-                labels: document.getElementById('labels').value
+                nationality: document.getElementById('nationality').value,
+                carModel: document.getElementById('carModel').value
+				mobile: document.getElementById('mobile').value,
+                location: document.getElementById('location').value,
+                email: document.getElementById('email').value,
+                purchaseDate: document.getElementById('purchaseDate').value,
+				paymentType: document.getElementById('paymentType').value,
+                bank: document.getElementById('bank').value,
+                salary: document.getElementById('salary').value
             };
 
             fetch('https://us-central1-waapi-bq.cloudfunctions.net/function-3', {
