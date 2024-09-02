@@ -32,10 +32,7 @@ app.post('/submit', async (req, res) => {
       mobile,
       location,
       email,
-      purchaseDate,
-      paymentType,
-      bank,
-      salary
+      purchaseDate
     } = req.body;
 
     const response = await sheets.spreadsheets.values.append({
@@ -43,7 +40,7 @@ app.post('/submit', async (req, res) => {
       range: 'Sheet1!A1:L1',  // Update the range to include all columns
       valueInputOption: 'RAW',
       resource: {
-        values: [[name, title, nationality, carModel, mobile, location, email, purchaseDate, paymentType, bank, salary]],
+        values: [[name, title, nationality, carModel, mobile, location, email, purchaseDate]],
       },
     });
 
