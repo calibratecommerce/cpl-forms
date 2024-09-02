@@ -20,15 +20,15 @@
 
         <div class="radio-group">
             <label>Nationality / الجنسية*</label>
-            <label><input type="radio" id="nationalitySaudi" name="option2" value="Saudi" required>Saudi / سعودي</label>
-            <label><input type="radio" id="nationalityNonSaudi" name="option2" value="Non-Saudi" required>Non-Saudi / غير سعودي</label>
+            <label><input type="radio" id="nationalitySaudi" name="Option2" value="Saudi" required>Saudi / سعودي</label>
+            <label><input type="radio" id="nationalityNonSaudi" name="Option2" value="Non-Saudi" required>Non-Saudi / غير سعودي</label>
         </div>
 
         <div class="radio-group">
             <label>Car Model / موديل السيارة*</label>
-            <label><input type="radio" id="carModelArrizo6Pro" name="option3" value="Arrizo 6 Pro" required> Arrizo 6 Pro</label>
-            <label><input type="radio" id="carModelArrizo8" name="option3" value="Arrizo 8" required> Arrizo 8</label>
-            <label><input type="radio" id="carModelTiggo7Pro" name="option3" value="Tiggo 7 Pro" required> Tiggo 7 Pro</label>
+            <label><input type="radio" id="carModelArrizo6Pro" name="Option3" value="Arrizo 6 Pro" required> Arrizo 6 Pro</label>
+            <label><input type="radio" id="carModelArrizo8" name="Option3" value="Arrizo 8" required> Arrizo 8</label>
+            <label><input type="radio" id="carModelTiggo7Pro" name="Option3" value="Tiggo 7 Pro" required> Tiggo 7 Pro</label>
         </div>
 
         <label for="mobile">Mobile / الجوال*</label>
@@ -48,10 +48,10 @@
 
         <div class="radio-group">
             <label>Expected Purchase Date / تاريخ الشراء المتوقع*</label>
-            <label><input type="radio" id="purchaseDateImmediately" name="option4" value="Immediately" required>Immediately / فوري </label>
-            <label><input type="radio" id="purchaseDateOneMonth" name="option4" value="One month" required>One month  / خلال شهر </label>
-            <label><input type="radio" id="purchaseDateTwoMonths" name="option4" value="Two months" required>Two months / خلال شهرين</label>
-            <label><input type="radio" id="purchaseDateThreeMonthsAndAbove" name="option4" value="3 months and above" required>3 months and above / خلال 3 أشهر أو اكثر</label>
+            <label><input type="radio" id="purchaseDateImmediately" name="Option4" value="Immediately" required>Immediately / فوري </label>
+            <label><input type="radio" id="purchaseDateOneMonth" name="Option4" value="One month" required>One month  / خلال شهر </label>
+            <label><input type="radio" id="purchaseDateTwoMonths" name="Option4" value="Two months" required>Two months / خلال شهرين</label>
+            <label><input type="radio" id="purchaseDateThreeMonthsAndAbove" name="Option4" value="3 months and above" required>3 months and above / خلال 3 أشهر أو اكثر</label>
         </div>
 
        
@@ -130,12 +130,12 @@
             const formData = {
 		name: document.getElementById('name').value,
 	            title: document.querySelector('input[name="title"]:checked').value,
-	            nationality: document.querySelector('input[name="option2"]:checked').value,
-	            carModel: document.querySelector('input[name="option3"]:checked').value,
+	            Option2: document.querySelector('input[name="Option2"]:checked').value,
+	            Option3: document.querySelector('input[name="Option3"]:checked').value,
 	            mobile: document.getElementById('mobile').value,
-	            location: document.querySelector('input[name="geo"]:checked').value,
+	            geo: document.querySelector('input[name="geo"]:checked').value,
 	            email: document.getElementById('email').value,
-	            purchaseDate: document.querySelector('input[name="option4"]:checked').value,
+	            Option4: document.querySelector('input[name="Option4"]:checked').value,
         };
             fetch('https://us-central1-waapi-bq.cloudfunctions.net/function-3', {
             //fetch('http://localhost:8080/submit', {
