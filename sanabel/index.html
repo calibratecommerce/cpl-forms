@@ -20,15 +20,15 @@
 
         <div class="radio-group">
             <label>Nationality / الجنسية*</label>
-            <label><input type="radio" id="nationalitySaudi" name="nationality" value="Saudi" required>Saudi / سعودي</label>
-            <label><input type="radio" id="nationalityNonSaudi" name="nationality" value="Non-Saudi" required>Non-Saudi / غير سعودي</label>
+            <label><input type="radio" id="nationalitySaudi" name="option2" value="Saudi" required>Saudi / سعودي</label>
+            <label><input type="radio" id="nationalityNonSaudi" name="option2" value="Non-Saudi" required>Non-Saudi / غير سعودي</label>
         </div>
 
         <div class="radio-group">
             <label>Car Model / موديل السيارة*</label>
-            <label><input type="radio" id="carModelArrizo6Pro" name="carModel" value="Arrizo 6 Pro" required> Arrizo 6 Pro</label>
-            <label><input type="radio" id="carModelArrizo8" name="carModel" value="Arrizo 8" required> Arrizo 8</label>
-            <label><input type="radio" id="carModelTiggo7Pro" name="carModel" value="Tiggo 7 Pro" required> Tiggo 7 Pro</label>
+            <label><input type="radio" id="carModelArrizo6Pro" name="option3" value="Arrizo 6 Pro" required> Arrizo 6 Pro</label>
+            <label><input type="radio" id="carModelArrizo8" name="option3" value="Arrizo 8" required> Arrizo 8</label>
+            <label><input type="radio" id="carModelTiggo7Pro" name="option3" value="Tiggo 7 Pro" required> Tiggo 7 Pro</label>
         </div>
 
         <label for="mobile">Mobile / الجوال*</label>
@@ -36,11 +36,11 @@
 
         <div class="radio-group">
             <label>Location / الموقع*</label>
-            <label><input type="radio" id="locationRiyadh" name="location" value="Riyadh" required> Riyadh</label>
-            <label><input type="radio" id="locationJeddah" name="location" value="Jeddah" required> Jeddah</label>
-            <label><input type="radio" id="locationMecca" name="location" value="Mecca" required> Mecca</label>
-            <label><input type="radio" id="locationMadina" name="location" value="Madina" required> Madina</label>
-            <label><input type="radio" id="locationDammam" name="location" value="Dammam" required> Dammam</label>
+            <label><input type="radio" id="locationRiyadh" name="geo" value="Riyadh" required> Riyadh</label>
+            <label><input type="radio" id="locationJeddah" name="geo" value="Jeddah" required> Jeddah</label>
+            <label><input type="radio" id="locationMecca" name="geo" value="Mecca" required> Mecca</label>
+            <label><input type="radio" id="locationMadina" name="geo" value="Madina" required> Madina</label>
+            <label><input type="radio" id="locationDammam" name="geo" value="Dammam" required> Dammam</label>
         </div>
 
         <label for="email">Email / البريد الإلكتروني*</label>
@@ -48,10 +48,10 @@
 
         <div class="radio-group">
             <label>Expected Purchase Date / تاريخ الشراء المتوقع*</label>
-            <label><input type="radio" id="purchaseDateImmediately" name="purchaseDate" value="Immediately" required>Immediately / فوري </label>
-            <label><input type="radio" id="purchaseDateOneMonth" name="purchaseDate" value="One month" required>One month  / خلال شهر </label>
-            <label><input type="radio" id="purchaseDateTwoMonths" name="purchaseDate" value="Two months" required>Two months / خلال شهرين</label>
-            <label><input type="radio" id="purchaseDateThreeMonthsAndAbove" name="purchaseDate" value="3 months and above" required>3 months and above / خلال 3 أشهر أو اكثر</label>
+            <label><input type="radio" id="purchaseDateImmediately" name="option4" value="Immediately" required>Immediately / فوري </label>
+            <label><input type="radio" id="purchaseDateOneMonth" name="option4" value="One month" required>One month  / خلال شهر </label>
+            <label><input type="radio" id="purchaseDateTwoMonths" name="option4" value="Two months" required>Two months / خلال شهرين</label>
+            <label><input type="radio" id="purchaseDateThreeMonthsAndAbove" name="option4" value="3 months and above" required>3 months and above / خلال 3 أشهر أو اكثر</label>
         </div>
 
        
@@ -130,12 +130,12 @@
             const formData = {
 		name: document.getElementById('name').value,
 	            title: document.querySelector('input[name="title"]:checked').value,
-	            nationality: document.querySelector('input[name="nationality"]:checked').value,
-	            carModel: document.querySelector('input[name="carModel"]:checked').value,
+	            nationality: document.querySelector('input[name="option 2"]:checked').value,
+	            carModel: document.querySelector('input[name="option3"]:checked').value,
 	            mobile: document.getElementById('mobile').value,
-	            location: document.querySelector('input[name="location"]:checked').value,
+	            location: document.querySelector('input[name="geo"]:checked').value,
 	            email: document.getElementById('email').value,
-	            purchaseDate: document.querySelector('input[name="purchaseDate"]:checked').value,
+	            purchaseDate: document.querySelector('input[name="option4"]:checked').value,
         };
             fetch('https://us-central1-waapi-bq.cloudfunctions.net/function-3', {
             //fetch('http://localhost:8080/submit', {
