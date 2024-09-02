@@ -128,17 +128,15 @@
             event.preventDefault();
             
             const formData = {
-                name: document.getElementById('name').value,
-                title: document.getElementById('title').value,
-                nationality: document.getElementById('nationality').value,
-                carModel: document.getElementById('carModel').value,
-		mobile: document.getElementById('mobile').value,
-                location: document.getElementById('location').value,
-                email: document.getElementById('email').value,
-                purchaseDate: document.getElementById('purchaseDate').value,
-
-            };
-
+		name: document.getElementById('name').value,
+	            title: document.querySelector('input[name="title"]:checked').value,
+	            nationality: document.querySelector('input[name="nationality"]:checked').value,
+	            carModel: document.querySelector('input[name="carModel"]:checked').value,
+	            mobile: document.getElementById('mobile').value,
+	            location: document.querySelector('input[name="location"]:checked').value,
+	            email: document.getElementById('email').value,
+	            purchaseDate: document.querySelector('input[name="purchaseDate"]:checked').value,
+        };
             fetch('https://us-central1-waapi-bq.cloudfunctions.net/function-3', {
             //fetch('http://localhost:8080/submit', {
                 method: 'POST',
