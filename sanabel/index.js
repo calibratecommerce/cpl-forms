@@ -40,7 +40,7 @@ app.post('/submit', async (req, res) => {
       range: 'Sheet1!A1:L1',  // Update the range to include all columns
       valueInputOption: 'RAW',
       resource: {
-        values: [[name, title, option2, option3, mobile, geo, email, option4]],
+        values: [[name, title, Option2, Option3, mobile, geo, email, Option4]],
       },
     });
 
