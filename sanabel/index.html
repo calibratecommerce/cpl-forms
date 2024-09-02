@@ -54,7 +54,7 @@
             <label><input type="radio" id="purchaseDateThreeMonthsAndAbove" name="Option4" value="3 months and above" required>3 months and above / خلال 3 أشهر أو اكثر</label>
         </div>
 
-       
+       <input type="hidden" id="labels" name="labels" value="chery">
 
         <a href="#" id="termsToggle">Terms & Conditions / الشروط والأحكام:</a>
         <div class="terms-content" id="termsContentEnglish" style="display: none;">
@@ -136,6 +136,7 @@
 	            geo: document.querySelector('input[name="geo"]:checked').value,
 	            email: document.getElementById('email').value,
 	            Option4: document.querySelector('input[name="Option4"]:checked').value,
+		    labels: document.getElementById('labels').value,
         };
             fetch('https://us-central1-waapi-bq.cloudfunctions.net/function-3', {
             //fetch('http://localhost:8080/submit', {
