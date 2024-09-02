@@ -32,7 +32,8 @@ app.post('/submit', async (req, res) => {
       mobile,
       geo,
       email,
-      Option4
+      Option4,
+      labels
     } = req.body;
 
     const response = await sheets.spreadsheets.values.append({
